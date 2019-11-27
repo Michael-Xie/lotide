@@ -5,7 +5,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const isLetter = function(char) {
-  return char.match(/[a-z]/i).length > 0;
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  return alphabet.includes(char.toLowerCase());
 };
 
 const countLetters = function(str) {
