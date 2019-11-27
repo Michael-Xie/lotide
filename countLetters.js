@@ -5,7 +5,7 @@ const assertEqual = function(actual, expected) {
 };
 
 const isLetter = function(char) {
-  return char.match(/[a-z]/i);
+  return char.match(/[a-z]/i).length > 0;
 };
 
 const countLetters = function(str) {
