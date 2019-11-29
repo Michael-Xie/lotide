@@ -11,6 +11,9 @@ const isObject = function(object) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
+    return false;
+  }
   for (let key of Object.keys(object1)) {
     if (isObject(object1[key]) && isObject(object2[key])) {
       const isEqual = eqObjects(object1[key], object2[key]);
@@ -27,13 +30,13 @@ const eqObjects = function(object1, object2) {
 
 // console.log(eqObjects({}, {}));
 
-// const ab = { a: "1", b: "2" };
-// const ba = { b: "2", a: "1" };
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
 
-// assertEqual(eqObjects(ab, ba), true);
+assertEqual(eqObjects(ab, ba), true);
 
-// const abc = { a: "1", b: "2", c: "3" };
-// assertEqual(eqObjects(ab, abc), false);
+const abc = { a: "1", b: "2", c: "3" };
+assertEqual(eqObjects(ab, abc), false);
 
 // const cd = { c: "1", d: ["2", 3] };
 // const dc = { d: ["2", 3], c: "1" };
