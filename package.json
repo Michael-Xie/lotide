@@ -1,12 +1,13 @@
 {
-  "name": "lotide",
+  "name": "@xiemicha/lotide",
   "version": "1.0.0",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "chai": "^4.2.0"
+    "chai": "^4.2.0",
+    "my-package": "0.0.0"
   },
   "devDependencies": {
     "mocha": "^6.2.2"
@@ -18,11 +19,11 @@
     "type": "git",
     "url": "git+https://github.com/Michael-Xie/lotide.git"
   },
-  "author": "",
+  "author": "Michael Xie",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Michael-Xie/lotide/issues"
   },
   "homepage": "https://github.com/Michael-Xie/lotide#readme",
-  "description": ""
+  "description": "A mini clone of the [Lodash](https://lodash.com) library."
 }
